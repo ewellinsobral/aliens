@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 15950460}
   - component: {fileID: 15950459}
   - component: {fileID: 15950458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e15ca69eed7b447b0e5078cbae5860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  Speed: 0
+  JumpForce: 0
 --- !u!1 &2056589989
 GameObject:
   m_ObjectHideFlags: 0
