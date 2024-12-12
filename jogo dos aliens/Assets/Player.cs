@@ -32,38 +32,38 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetAxis("Horizontal") > 0f)
         {
-            anim.SetBool("walk", true);
+            anim.SetBool("walking", true);
             transform.eulerAngles = new Vector3(0f,0f,0f);
         }
          if(Input.GetAxis("Horizontal") < 0f)
         {
-            anim.SetBool("walk", true);
+            anim.SetBool("walking", true);
              transform.eulerAngles = new Vector3(0f,180f,0f);
         }
          if(Input.GetAxis("Horizontal") == 0f)
         {
-            anim.SetBool("walk", false);
+            anim.SetBool("walking", false);
         }
         
     }
     void Jump()
     {
-        if(Input.GetButtonDown("jump") && !jumping)
+        if(Input.GetButtonDown("Jump") && !jumping)
         {
             rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameobject.layer == 8)
+        if(collision.gameObject.layer == 8)
         {
             jumping = false;
-             anim.SetBool("jump", false);
+             anim.SetBool("jumping", false);
         }
     }
      void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameobject.layer == 8)
+        if(collision.gameObject.layer == 8)
         {
             jumping = true;
         }
