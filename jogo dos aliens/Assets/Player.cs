@@ -60,6 +60,11 @@ public class PlayerMovement : MonoBehaviour
             jumping = false;
              anim.SetBool("jumping", false);
         }
+        if(collision.gameObject.tag == "ball")
+        {
+           GameController.instance.ShowGameOver();
+           Destroy(gameObject);
+        }
     }
      void OnCollisionExit2D(Collision2D collision)
     {
