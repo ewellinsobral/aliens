@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -62,7 +63,9 @@ public class PlayerMovement : MonoBehaviour
         }
         if(collision.gameObject.tag == "ball")
         {
+            Console.WriteLine("colidiu com a bola");
            GameController.instance.ShowGameOver();
+
            Destroy(gameObject);
         }
     }

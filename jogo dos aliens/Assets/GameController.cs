@@ -13,8 +13,8 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
-   public void ShowGameOver(){
-
+   public void ShowGameOver()
+   {
    gameOver.SetActive(true);
    }
 }
